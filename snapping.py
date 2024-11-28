@@ -34,8 +34,8 @@ def process_gnss_csv(input_csv, output_csv):
                 writer.writerow({
                     # 'latitude': lat,
                     # 'longitude': lon,
-                    'snapped_latitude': snapped_lat,
-                    'snapped_longitude': snapped_lon
+                    'latitude': snapped_lat,
+                    'longitude': snapped_lon
                 })
 
 # Input and output CSV file paths
