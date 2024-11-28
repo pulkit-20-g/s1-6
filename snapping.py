@@ -20,7 +20,7 @@ def snap_to_road(lat, lon):
 def process_gnss_csv(input_csv, output_csv):
     with open(input_csv, mode='r') as infile, open(output_csv, mode='w', newline='') as outfile:
         reader = csv.DictReader(infile)
-        fieldnames = [ 'snapped_latitude', 'snapped_longitude']
+        fieldnames = [ 'latitude', 'longitude']
         writer = csv.DictWriter(outfile, fieldnames=fieldnames)
         
         writer.writeheader()
