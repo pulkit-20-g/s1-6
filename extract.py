@@ -66,15 +66,14 @@ def parse_kml_file(kml_filename):
         if coordinates is not None:
             coord_str = coordinates.text.strip()
             coords = coord_str.split(',')
-            if len(coords) >= 3:
+            if len(coords) >= 2:
                 latitude = coords[1]
                 longitude = coords[0]
-                height = coords[2] if len(coords) > 2 else "0"
+               
                 
                 kml_data.append({
                     'latitude': latitude,
-                    'longitude': longitude,
-                    'height': height
+                    'longitude': longitude
                 })
     return kml_data
 
@@ -110,7 +109,7 @@ def main():
     
     # Define the headers for the CSV files
     pos_headers = ['latitude', 'longitude', 'height', 'Q', 'ns', 'sdn', 'sde']
-    kml_headers = ['latitude', 'longitude', 'height']
+    kml_headers = ['latitude', 'longitude']
     
     # Write cleaned data to CSV
     write_to_csv(pos_data, pos_output_filename, pos_headers)
