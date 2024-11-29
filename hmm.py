@@ -1,5 +1,4 @@
-!pip install hmmlearn
-!pip install folium
+
 import numpy as np
 import pandas as pd
 from hmmlearn import hmm
