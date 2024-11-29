@@ -55,7 +55,7 @@ def save_map(map_obj, filename='osm_map.html'):
 
 def main():
     # Load the cleaned GPS data from the CSV files
-    pos_data = load_csv_data('/Users/pulkitgarg/Desktop/SIH/snapped_points.csv')
+    pos_data = load_csv_data('/Users/pulkitgarg/Desktop/SIH/python/s1-6/snapped_points.csv')
     # kml_data = load_csv_data('cleaned_kml_data.csv')
 
     # Create a new OpenStreetMap
@@ -66,7 +66,7 @@ def main():
     # plot_gps_points_on_map(kml_data, osm_map)
 
     # Save the map to an HTML file
-    save_map(osm_map, 'osm_map.html')
+    save_map(osm_map, 'osm_map_1.html')
 
     print("The map has been generated and saved as 'osm_map.html'. You can open it in your browser.")
 
