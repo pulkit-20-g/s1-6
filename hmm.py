@@ -4,14 +4,17 @@ import pandas as pd
 from hmmlearn import hmm
 import folium
 
+# Set the random seed for reproducibility
+np.random.seed(42)  # Use any integer you want for a fixed seed
+
 # Load your snapped data
-snapped_data = pd.read_csv('/content/snapped_points_3.csv')
+snapped_data = pd.read_csv('snapped_points.csv')
 
 # Prepare the coordinates (latitude, longitude) as the feature vector for HMM
 coordinates = snapped_data[['latitude', 'longitude']].values
 
 # Define the HMM model (assuming two road types: highway and service road)
-model = hmm.GaussianHMM(n_components=2, covariance_type="diag", n_iter=1000)
+model = hmm.GaussianHMM(n_components=2, covariance_type="diag", n_iter=1000, random_state=42)
 
 # Train the model on the snapped coordinates
 model.fit(coordinates)
