@@ -39,8 +39,8 @@ def process_gnss_csv(input_csv, output_csv):
                 })
 
 # Input and output CSV file paths
-input_csv = '/Users/pulkitgarg/Desktop/SIH/python/cleaned_kml_data.csv'
-output_csv = 'snapped_points.csv'
+input_csv = '/Users/pulkitgarg/Desktop/SIH/python/cleaned_kml_data4.csv'
+output_csv = 'snapped_points_4.csv'
 
 # Process the GNSS points and snap them to the nearest road
 process_gnss_csv(input_csv, output_csv)
